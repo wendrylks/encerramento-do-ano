@@ -1,73 +1,34 @@
-body {
-color: #333;
+:root{
+--bg:#f7f7f9;
+--card:#ffffff;
+--accent:#2b6cb0;
+--muted:#666;
 }
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.site-header{background:linear-gradient(90deg,var(--accent),#4aa3d9);color:white;padding:28px 0}
+.site-header h1{margin:0 0 6px;font-size:1.6rem}
+.site-header p{margin:0;opacity:0.95}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(15,15,15,0.06);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:160px;object-fit:cover}
+.card .content{padding:12px}
+.card h3{margin:0 0 8px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:0.92rem}
+.card a{display:inline-block;margin-top:10px;text-decoration:none;color:var(--accent);font-weight:600}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
 
 
-header {
-background: #2b6cb0;
-color: white;
-padding: 20px;
-text-align: center;
-}
+/* Página do projeto */
+.project-hero{max-width:900px;margin:24px auto;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,15,15,0.06)}
+.project-hero img{width:100%;height:360px;object-fit:cover;border-radius:8px}
+.project-hero h2{margin:14px 0 8px}
+.project-hero p.lead{color:var(--muted)}
+.back-link{display:inline-block;margin-top:12px}
 
 
-nav ul {
-display: flex;
-justify-content: center;
-gap: 20px;
-padding: 0;
-list-style: none;
-}
-
-
-nav a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-}
-
-
-main {
-padding: 20px;
-}
-
-
-section {
-margin-bottom: 40px;
-}
-
-
-.grid-galeria {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 15px;
-}
-
-
-.grid-galeria img {
-width: 100%;
-border-radius: 10px;
-}
-
-
-footer {
-background: #1a202c;
-color: white;
-text-align: center;
-padding: 15px 0;
-margin-top: 40px;
-}
-
-
-.hidden {
-display: none;
-}
-
-
-/* Responsividade */
-@media (max-width: 600px) {
-nav ul {
-flex-direction: column;
-gap: 10px;
-}
+@media (max-width:520px){
+.card img{height:130px}
+.project-hero img{height:200px}
 }
